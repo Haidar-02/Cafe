@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --primary: 25 30% 20%; /* Deep coffee brown */
+    --primary-foreground: 210 40% 98%;
+    --radius: 0.75rem;
+  }
+}
+
+.font-arabic {
+  font-family: 'Cairo', sans-serif;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+}
+
+/* Print Styles */
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; color: black; }
+  .h-screen { height: auto !important; }
+}
